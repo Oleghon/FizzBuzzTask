@@ -4,6 +4,14 @@ public class FizzBuzzDetector {
     private String output;
     private int count;
 
+    // method "getOverlappings" convert input string to new string where every third word replaced to "Fizz"
+    // and every fifth word replaced to "Buzz".
+    // if the remainder of dividing a word index by three or five is zero, the word with a matching index will be replaced
+    // if the remainder of dividing a word index by three AND five is zero, the word with a matching index will be replaced to "FizzBuzz"
+    // if input string is null or have non alphanumeric characters and length  more than 100 or less than 7, string won`t be converted
+    // int variable "wordCount" counts words that were replaced
+    // after replacing string will assigned to local variable "output" and return
+    // also "wordCount" will assigned to local variable "count"
     public String getOverlappings(String str) {
         if (str == null | !str.matches("[,'.`A-Za-z0-9 ]{7,100}"))
             return str;
@@ -35,6 +43,5 @@ public class FizzBuzzDetector {
                 .append(output)
                 .append("\ncount:")
                 .append(count).toString();
-
     }
 }

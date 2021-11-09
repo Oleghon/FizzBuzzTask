@@ -31,7 +31,7 @@ public class FizzBuzzDetectorTest {
 
     @Test
     public void toStringTest() {
-        String expected ="output string:\nnull\ncount:0";
+        String expected = "output string:\nnull\ncount:0";
         fizzBuzz.getOverlappings("1 2 3");
         assertEquals(expected, fizzBuzz.toString());
         expected = "output string:\n1 2 Fizz 4\ncount:1";
@@ -40,6 +40,5 @@ public class FizzBuzzDetectorTest {
         expected = "output string:\nMary had Fizz little Buzz Fizz lamb, little Fizz Buzz had Fizz little lamb FizzBuzz fleece was Fizz as Buzz\ncount:9";
         fizzBuzz.getOverlappings("Mary had a little lamb Little lamb, little lamb Mary had a little lamb It`s fleece was white as snow");
         assertEquals(expected, fizzBuzz.toString());
-
     }
 }
