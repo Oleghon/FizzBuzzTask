@@ -12,9 +12,9 @@ public class FizzBuzzDetector {
     // int variable "wordCount" counts words that were replaced
     // after replacing string will assigned to local variable "output" and return
     // also "wordCount" will assigned to local variable "count"
-    public String getOverlappings(String str) {
+    public String getOverlappings(String str) throws RuntimeException {
         if (str == null | !str.matches("[,'.`A-Za-z0-9 ]{7,100}"))
-            return str;
+            throw new RuntimeException("Input should contain at least 7 or more alphanumeric characters and symbols \"` , ' . \" but not more than 100.");
 
         String[] strs = str.split(" ");
         StringBuilder sb = new StringBuilder();
