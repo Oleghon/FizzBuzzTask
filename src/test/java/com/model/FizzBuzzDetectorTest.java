@@ -43,21 +43,27 @@ public class FizzBuzzDetectorTest {
     public void shouldReplaceOneWord() {
         String expected = "1, 2, Fizz";
         String actual = "1, 2, 3";
-        assertEquals(expected, fizzBuzz.getOverlappings(actual));
+        String result = fizzBuzz.getOverlappings(actual);
+        assertEquals(expected, result);
+        assertEquals(1, fizzBuzz.getCount());
     }
 
     @Test
     public void shouldReplaceThreeWords() {
         String expected = "1, 2, Fizz 4' Buzz Fizz";
         String actual = "1, 2, 3, 4' 5` 6";
-        assertEquals(expected, fizzBuzz.getOverlappings(actual));
+        String result = fizzBuzz.getOverlappings(actual);
+        assertEquals(expected, result);
+        assertEquals(3, fizzBuzz.getCount());
     }
 
     @Test
     public void shouldReplaceNineWords() {
         String expected = "Mary had Fizz little Buzz Fizz lamb, little Fizz Buzz had Fizz little lamb FizzBuzz fleece was Fizz as Buzz";
         String actual = "Mary had a little lamb Little lamb, little lamb Mary had a little lamb It`s fleece was white as snow";
-        assertEquals(expected, fizzBuzz.getOverlappings(actual));
+        String result = fizzBuzz.getOverlappings(actual);
+        assertEquals(expected, result);
+        assertEquals(9, fizzBuzz.getCount());
     }
 
     @Test
